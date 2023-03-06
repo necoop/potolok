@@ -1,0 +1,295 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/Muller-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/Muller-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/Muller-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/Muller-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Muller";
+  src: url("../fonts/Muller-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800;
+}
+body {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  min-height: 2000px;
+}
+
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1170px;
+  }
+}
+.navbar {
+  height: 101px;
+  flex-wrap: nowrap;
+}
+
+.navbar__logo {
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26.2722px;
+  line-height: 89.9%;
+  text-transform: uppercase;
+  width: 185px;
+}
+
+.navbar__left {
+  width: 609px;
+  display: flex;
+}
+
+.navbar__right {
+  width: 100%;
+  max-width: 383px;
+}
+
+.navbar__list {
+  display: flex;
+  gap: 33px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__item a {
+  font-size: 12px;
+  line-height: 12px;
+}
+
+body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(1) {
+  text-align: end;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: right;
+}
+
+.navbar__right__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsup__ico {
+  background: linear-gradient(180deg, #8cfb90 0%, #0eaa00 100%);
+  position: relative;
+  top: 2px;
+}
+
+.telegram__ico {
+  background: linear-gradient(180deg, #6486ff 0%, #2850dd 100%);
+}
+
+.order__btn {
+  padding: 12px 19px;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+@media (max-width: 1199px) {
+  .navbar__list {
+    gap: 15px;
+  }
+}
+/* Гамбургер*/
+#hamburger__menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+}
+
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center; /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 46px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#menu__btn > span,
+#menu__btn > span::before,
+#menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+#menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+
+#menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+
+#menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 65px 0 0 46px;
+  list-style: none;
+  text-align: start;
+  background: #d9d9d9;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+} /* элементы меню */
+.menu__item {
+  display: block;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+#menu__box > :not(:first-child) {
+  margin-top: 66px;
+}
+
+#menu__toggle {
+  position: fixed;
+}
+
+#menu__toggle:checked ~ #menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ #menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ #menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ #menu__box {
+  visibility: visible;
+  left: 0;
+}
+
+#menu__btn > span,
+#menu__btn > span::before,
+#menu__btn > span::after {
+  transition-duration: 0.25s;
+}
+
+#menu__box {
+  transition-duration: 0.25s;
+}
+
+.menu__item {
+  transition-duration: 0.25s;
+}
+
+/* Гамбургер окончание */
+@media (max-width: 991px) {
+  #hamburger__menu {
+    display: inline-block;
+  }
+  .navbar__list,
+  body > div > div.navbar__right > ul > li:not(:nth-child(1)) {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .navbar {
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 16px;
+  }
+  .navbar__logo {
+    font-weight: 800;
+    font-size: 9.1969px;
+    line-height: 89.9%;
+    width: 66px;
+  }
+  body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(1) {
+    font-size: 9.1969px;
+    line-height: 9px;
+  }
+  body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
+    font-weight: 400;
+    font-size: 5.51814px;
+    line-height: 6px;
+  }
+  #menu__btn {
+    width: 13px;
+    top: 2px;
+  }
+  #menu__btn > span, #menu__btn > span::before, #menu__btn > span::after {
+    height: 2px;
+  }
+  #menu__btn > span::before {
+    top: -4px;
+  }
+  #menu__btn > span::after {
+    top: 4px;
+  }
+  .navbar__left {
+    width: 60%;
+  }
+}/*# sourceMappingURL=main.css.map */
