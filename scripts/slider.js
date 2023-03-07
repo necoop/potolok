@@ -3,7 +3,6 @@ $(document).ready(function() {
       $(window).on("load", resizeSlider);
       $(window).on("resize", resizeSlider);
       
-      
       function resizeSlider(){
         let bodyWidth = $("body").width();
         if (bodyWidth < 550) {

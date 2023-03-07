@@ -544,11 +544,6 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
     height: 40px;
     border-radius: 13px;
     font-size: 10px;
-    &::before {
-      // width: 14px;
-      // height: 18px;
-      // background-size: 14px 18px;
-    }
   }
   .calculation__btn {
     width: 176px;
@@ -799,6 +794,11 @@ body > section > div.advantage__box > div:nth-child(4) {
 }
 @media(max-width:575px){
   body > section > div.advantage__box{
+    display: none;
+  }
+}
+@media(min-width:576px){
+  .swiper{
     display: none;
   }
 }
