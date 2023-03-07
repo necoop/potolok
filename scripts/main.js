@@ -1,3 +1,4 @@
+//Блокируем скролл при открытии меню
 let menuToggle = $("#menu__toggle");
 menuToggle.change((e) => {
   if (menuToggle[0].checked) {
@@ -5,6 +6,12 @@ menuToggle.change((e) => {
   } else {
     $("body").removeClass("noscrloll");
   }
+});
+
+//Закрытие меню при нажатии
+let menuBox = $('#menu__box');
+menuBox.click(()=>{
+  menuToggle[0].checked = false;
 });
 
 $(window).on("load", setSize);

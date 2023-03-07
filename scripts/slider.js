@@ -42,6 +42,4 @@ $(document).ready(function() {
         spaceBetween: 15,
         loop: true,
       });
-      
-      
   });
