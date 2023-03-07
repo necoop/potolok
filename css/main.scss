@@ -982,3 +982,57 @@ body > section > div.advantage__box > div:nth-child(4) {
     display: none;
   }
 }
+#bg__coord > img.blur4 {
+  position: absolute;
+  left: 53px;
+  z-index: 11;
+  opacity: 0.5;
+  top: -68px;
+}
+body > section > div.advantage__box > div:nth-child(1) > img.blur1 {
+  position: absolute;
+  left: 58px;
+  z-index: 10;
+  top: -79px;
+  opacity: 0.6;
+}
+body > section > div.advantage__box > div:nth-child(2) > div.blur2 {
+  background: #95a5f4;
+  mix-blend-mode: screen;
+  filter: blur(9.5px);
+  position: absolute;
+  width: 53px;
+  height: 53px;
+  top: -59px;
+  left: 78px;
+  z-index: 10;
+}
+@media (max-width: 1200px) {
+  body > section > div.advantage__box > div:nth-child(1) > img.blur1 {
+    left: 35px;
+  }
+}
+@media (max-width: 991px) {
+  #bg__coord > img.blur4 {
+    left: 14px;
+  }
+  body > section > div.advantage__box > div:nth-child(1) > img.blur1 {
+    left: 4px;
+  }
+  body > section > div.advantage__box > div:nth-child(2) > div.blur2 {
+    top: -55px;
+    left: 29px;
+  }
+}
+@media (max-width: 767px) {
+  #bg__coord > img.blur4 {
+    left: -8px;
+  }
+  body > section > div.advantage__box > div:nth-child(1) > img.blur1 {
+    left: -14px;
+  }
+  body > section > div.advantage__box > div:nth-child(2) > div.blur2 {
+    top: -58px;
+    left: 17px;
+  }
+}
