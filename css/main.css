@@ -408,8 +408,6 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
 @media (max-width: 575px) {
   .main {
     margin-top: 13px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .map__btn {
     padding: 3px 7px;
@@ -568,12 +566,6 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
     height: 40px;
     border-radius: 13px;
     font-size: 10px;
-  }
-  body > section > div.calculation > a:nth-child(2) > div::before,
-  .calculation__btn::before {
-    width: 14px;
-    height: 18px;
-    background-size: 14px 18px;
   }
   .calculation__btn {
     width: 176px;
@@ -820,4 +812,90 @@ body > section > div.advantage__box > div:nth-child(4) {
     left: 3px;
     top: -65px;
   }
+}
+@media (max-width: 575px) {
+  body > section > div.advantage__box {
+    display: none;
+  }
+}
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  overflow-y: hidden;
+}
+
+.advantage__slider .advantage {
+  width: 203px;
+  height: 111px;
+  top: 64px;
+}
+.advantage__slider .advantage::before {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+  z-index: 20;
+  left: 74px;
+  top: -30px;
+}
+.advantage__slider .advantage img {
+  width: 40%;
+  z-index: 25;
+}
+.advantage__slider .advantage__inner::before {
+  width: 195px;
+  height: 103px;
+  left: 4px;
+  top: 4px;
+}
+.advantage__slider .advantage__outer {
+  border-radius: 20px;
+  height: 111px;
+  box-shadow: 0px 2.9508px 20.6556px rgba(65, 105, 249, 0.5);
+}
+.advantage__slider .advantage__outer::after {
+  width: 128px;
+  height: 2px;
+  left: 40px;
+}
+.advantage__slider h4 {
+  font-size: 12px;
+  line-height: 12px;
+  top: 33px;
+}
+.advantage__slider .advantage__text {
+  top: 35px;
+  font-size: 9px;
+  line-height: 10px;
+  width: 132px;
+}
+
+#slide1 img {
+  top: -37px;
+  left: 78px;
+}
+
+#slide2 img {
+  top: -55px;
+  left: 51px;
+}
+
+#slide3 img {
+  width: 35%;
+  top: -47px;
+  left: 61px;
+}
+
+#slide4 img {
+  width: 40%;
+  top: -53px;
+  left: 54px;
+}
+
+.swiper-slide {
+  margin-right: 10px;
+}
+
+#menu__box > li:nth-child(7) > a:hover {
+  background-image: none;
 }/*# sourceMappingURL=main.css.map */
