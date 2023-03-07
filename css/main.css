@@ -632,6 +632,7 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
 }
 
 .advantage__outer {
+  transition: 0.3s easy;
   width: 100%;
   height: 151px;
   background: #ffffff;
@@ -903,4 +904,14 @@ body > section > div.advantage__box > div:nth-child(4) {
 
 #menu__box > li:nth-child(7) > a:hover {
   background-image: none;
+}
+
+.swiper-slide-active .advantage__outer {
+  background: #2850DD;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); /* задаем градиентный фильтр */
+  transition: 0.3s ease all;
+  color: #fff;
+}
+.swiper-slide-active .advantage__outer::after {
+  background: linear-gradient(180deg, #FFDD65 0%, #FFC700 100%);
 }/*# sourceMappingURL=main.css.map */
