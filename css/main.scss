@@ -33,8 +33,8 @@ body {
   font-style: normal;
   font-weight: 400;
   color: #000000;
-  min-height: 2000px;
-  background: #d9d9d9;
+  // min-height: 2000px;
+  // background: #d9d9d9;
 }
 
 @media (min-width: 1200px) {
@@ -609,7 +609,7 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
   }
 }
 .advantage__outer {
-  transition: .3s easy;
+  transition: 0.3s easy;
   width: 100%;
   height: 151px;
   background: #ffffff;
@@ -667,16 +667,16 @@ body > div > div.navbar__right > ul > li:nth-child(1) > a > div:nth-child(2) {
   }
 }
 body > section > div.advantage__box > div:nth-child(2) > img {
-  top: -71px;
-  left: 67px;
+  top: -51px;
+  left: 95px;
 }
 body > section > div.advantage__box > div:nth-child(3) > img {
   top: -58px;
   left: 87px;
 }
 body > section > div.advantage__box > div:nth-child(4) > img {
-  top: -77px;
-  left: 61px;
+  top: -65px;
+  left: 86px;
 }
 body > section > div.advantage__box > div:nth-child(2) {
   margin-top: 31px;
@@ -715,13 +715,13 @@ body > section > div.advantage__box > div:nth-child(4) {
     left: 74px;
   }
   body > section > div.advantage__box > div:nth-child(2) > img {
-    left: 47px;
+    left: 75px;
   }
   body > section > div.advantage__box > div:nth-child(3) > img {
     left: 65px;
   }
   body > section > div.advantage__box > div:nth-child(4) > img {
-    left: 43px;
+    left: 66px;
   }
 }
 @media (max-width: 991px) {
@@ -743,13 +743,13 @@ body > section > div.advantage__box > div:nth-child(4) {
     left: 47px;
   }
   body > section > div.advantage__box > div:nth-child(2) > img {
-    left: 19px;
+    left: 47px;
   }
   body > section > div.advantage__box > div:nth-child(3) > img {
     left: 38px;
   }
   body > section > div.advantage__box > div:nth-child(4) > img {
-    left: 14px;
+    left: 39px;
   }
 }
 @media (max-width: 767px) {
@@ -782,24 +782,25 @@ body > section > div.advantage__box > div:nth-child(4) {
     left: 19px;
   }
   body > section > div.advantage__box > div:nth-child(2) > img {
-    left: 0px;
+    left: 26px;
+    width: 60%;
   }
   body > section > div.advantage__box > div:nth-child(3) > img {
     left: 6px;
     width: 70%;
   }
   body > section > div.advantage__box > div:nth-child(4) > img {
-    left: 3px;
+    left: 14px;
     top: -65px;
   }
 }
-@media(max-width:575px){
-  body > section > div.advantage__box{
+@media (max-width: 575px) {
+  body > section > div.advantage__box {
     display: none;
   }
 }
-@media(min-width:576px){
-  .swiper{
+@media (min-width: 576px) {
+  .swiper {
     display: none;
   }
 }
@@ -862,8 +863,9 @@ body > section > div.advantage__box > div:nth-child(4) {
   left: 78px;
 }
 #slide2 img {
-  top: -55px;
-  left: 51px;
+  top: -43px;
+  left: 70px;
+  width: 31%;
 }
 
 #slide3 img {
@@ -872,26 +874,52 @@ body > section > div.advantage__box > div:nth-child(4) {
   left: 61px;
 }
 #slide4 img {
-  width: 40%;
-  top: -53px;
-  left: 54px;
+  width: 35%;
+  top: -45px;
+  left: 67px;
 }
 .swiper-slide {
   margin-right: 10px;
 }
-#menu__box > li:nth-child(7) > a{
-  &:hover{
+#menu__box > li:nth-child(7) > a {
+  &:hover {
     background-image: none;
   }
 }
-.swiper-slide-active{
-  .advantage__outer{
-    background:#2850DD;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0)); /* задаем градиентный фильтр */
-    transition:  0.3s ease all;
+.swiper-slide-active {
+  .advantage__outer {
+    background: #2850dd;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0)
+    ); /* задаем градиентный фильтр */
+    transition: 0.3s ease all;
     color: #fff;
-    &::after{
-      background: linear-gradient(180deg, #FFDD65 0%, #FFC700 100%);
+    &::after {
+      background: linear-gradient(180deg, #ffdd65 0%, #ffc700 100%);
+    }
+  }
+}
+
+.ibg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+}
+@media(max-width: 1200px){
+  .ibg{
+    img{
+      object-fit: cover;
     }
   }
 }
