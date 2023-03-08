@@ -962,6 +962,8 @@ body > section > div.advantage__box > div:nth-child(4) {
 .container__master {
   height: 100%;
   position: relative;
+  bottom: 73px;
+  left: 23px;
 }
 
 .triangle {
@@ -1038,6 +1040,10 @@ body > section > div.advantage__box > div:nth-child(2) > div.blur2 {
   body > section > div.advantage__box > div:nth-child(2) > div.blur2 {
     top: -55px;
     left: 29px;
+  }
+  .container__master {
+    bottom: 42px;
+    left: 88px;
   }
 }
 @media (max-width: 767px) {
