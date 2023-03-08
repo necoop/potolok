@@ -962,8 +962,9 @@ body > section > div.advantage__box > div:nth-child(4) {
 .container__master {
   height: 100%;
   position: relative;
-  bottom: 73px;
+  bottom: 94px;
   left: 23px;
+  transform: scale(1.05);
 }
 
 .triangle {
@@ -982,6 +983,13 @@ body > section > div.advantage__box > div:nth-child(4) {
 @media (max-width: 1200px) {
   .ibg .master {
     width: 670px;
+  }
+  .container__master {
+    height: 100%;
+    position: relative;
+    bottom: 114px;
+    left: 21px;
+    transform: scale(1.07);
   }
 }
 @media (max-width: 991px) {
